@@ -33,4 +33,25 @@ public class Produto {
 	public boolean ehCaro() {
 		return (preco > 100);
 	}
+
+	public double valorComDesconto(int qtdPontos) {
+		if (qtdPontos > 10) {
+			return preco * 0.9;
+		} else {
+			return preco;
+		}
+	}
+
+	public double valorComDesconto(double valor) {
+		if (valor > 1000) {
+			return preco * 0.85;
+		} else {
+			return preco;
+		}
+	}
+
+	@Override
+	public String toString() {
+		return nome;
+	}
 }
